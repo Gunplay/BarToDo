@@ -6,6 +6,7 @@ import Head from '../head/head'
 import CreateListTodos from '../create-list-todos/create-list-todos'
 
 import InputToDo from '../input-todo/input-todo'
+import ToDosActions from '../TodosAction/TodosAction'
 
 function App() {
 
@@ -48,6 +49,10 @@ function App() {
    
   }
 
+  const resetTodosHandler = () => {
+    setTodos([])
+  }
+  
   const deleteItem = (id) => {
      setTodos(todo.filter(item => item.id !== id))
     // console.log(id)
@@ -64,7 +69,10 @@ function App() {
       {/* <CreateListTodos text={textObj} onDelete={(id) => {console.log(id)}}/> */}
       
       {!todo.length ? <h1 style={{textAlign: "center", background: "white", border: "1px solid #007bff"}}>You don't have any to do...</h1> : <CreateListTodos text={todo} onDelete={deleteItem} />}
-      <InputToDo text={text} setText={setText}  addTodo={addTodoHandler} />
+      <InputToDo text={text} setText={setText}  addTodo={addTodoHandler} deleteAllTodo={resetTodosHandler}/>
+      <div>
+      {!todo.length ?  "" : <ToDosActions deleteTodos={resetTodosHandler}/>}
+      </div>
     </div>
   )
 }
