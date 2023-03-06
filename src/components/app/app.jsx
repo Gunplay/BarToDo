@@ -63,7 +63,7 @@ function App() {
       <Head />
       {/* <CreateListTodos text={textObj} onDelete={(id) => {console.log(id)}}/> */}
       
-      <CreateListTodos text={todo} onDelete={deleteItem} />
+      {!todo.length ? <h1 style={{textAlign: "center", background: "white", border: "1px solid #007bff"}}>You don't have any to do...</h1> : <CreateListTodos text={todo} onDelete={deleteItem} />}
       <InputToDo text={text} setText={setText}  addTodo={addTodoHandler} />
     </div>
   )
