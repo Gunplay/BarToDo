@@ -1,0 +1,41 @@
+.menuCreateBtn {
+  margin-right: 10px;
+  min-height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+/* базовые стили для кнопки */
+.menuCreateBtn button {
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 5px;
+  background-color: #007bff; /* цвет фона */
+  color: #fff; /* цвет текста */
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* стили для плюса */
+.menuCreateBtn button::after {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+/* стили при наведении */
+.menuCreateBtn button:hover {
+  background-color: #0062cc; /* изменение цвета фона при наведении */
+}
+
+/* стили при нажатии */
+.menuCreateBtn button:active {
+  box-shadow: none; /* убираем тень при нажатии */
+  transform: translateY(3px); /* добавляем эффект нажатия */
+}

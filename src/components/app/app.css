@@ -1,0 +1,17 @@
+.app {
+  position: relative;
+  margin: 20px auto;
+  padding: 0px 0px 0px 0px;
+
+  align-items: center;
+  max-width: 500px;
+  min-height: 500px;
+  border-radius: 20px;
+  border: 4px solid white;
+  color: dark;
+}
+
+.btn-menu {
+  display: flex;
+  justify-content: center;
+}

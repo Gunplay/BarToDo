@@ -1,0 +1,18 @@
+.justify-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.vertical-dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px; /* высота блока точек */
+}
+
+.vertical-dots span {
+  width: 20px; /* ширина точек */
+  height: 5px; /* высота точек */
+  background-color: black; /* цвет точек */
+  cursor: pointer;
+}
